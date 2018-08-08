@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible"
+        content="ie=edge">
+  <title>Do while Pildoras Inf</title>
+</head>
+
+<body>
+  <table>
+    <tr>
+      <td>
+        <input type="text"
+               id="mensaje">
+      </td>
+      <td>
+        <input type="text"
+               id="intentos">
+      </td>
+    </tr>
+  </table>
+
+ 
+</body>
+
+<script>
+  var $_mensaje = document.getElementById("mensaje");
+  var $_intentos = document.getElementById("intentos"), $_miNumero = 0, $_numeroAletorio = 0 , $_numeroIntentos = 0;
+
+  $_numeroAletorio = Math.round((Math.random(100) * 100));
+
+
+
+
+
+
+  do {
+   
+
+    $_miNumero = prompt("Escribe un numero entre 1 y 100");
+
+    if ($_miNumero > $_numeroAletorio) {
+      $_mensaje.value = "mas bajo"
+    } 
+    
+    if ($_miNumero < $_numeroAletorio) {
+      $_mensaje.value = "mas alto"
+    }
+
+    $_numeroIntentos++;
+
+    $_intentos.value = $_numeroIntentos;
+
+  } while ($_miNumero != $_numeroAletorio);
+
+  document.write("Felicidades acertaste, el numeor era el: "+ $_numeroAletorio);
+
+</script>
+
+</html>

@@ -1,0 +1,19 @@
+body{
+
+  background:blue;
+}
+
+#Titulo{
+color: antiquewhite;
+font-size: 70px;
+}
+
+#Text{
+font-size: 20px;
+padding: 0px;
+border-top: 2px solid #fff;
+border-bottom: 2px solid #fff;
+text-align: center;
+}
+
+

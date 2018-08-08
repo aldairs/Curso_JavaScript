@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>calculadora </title>
+</head>
+
+<script>
+
+  var repetir = "si";
+
+function suma(num1,num2){
+
+alert("la suma es:"+(num1+num2))
+
+}
+
+function resta(num1,num2){
+
+alert("la recta es:"+(num1-num2))
+
+}
+
+function multiplicacion(num1,num2){
+
+alert("la multiplicación es:"+(num1*num2))
+
+}
+
+function division(num1,num2){
+
+alert("la división es:"+(num1/num2))
+
+}
+
+</script>
+
+<body>
+  
+
+
+
+  <script>
+
+    do{
+  
+  var operacion = prompt("cual operacion quieres hacer");
+  var operador1 = parseInt(prompt("cual es el numero 1"));
+  var operador2 = parseInt(prompt("cual es el numero 2"));
+
+
+if(operacion == "suma"){
+suma(operador1,operador2);
+
+}else if(operacion == "resta"){
+resta(operador1,operador2);
+
+}else if(operacion == "division"){
+division(operador1,operador2);
+
+}else if(operacion == "multiplicacion"){
+multiplicacion(operador1,operador2);
+
+}else{
+
+  alert("lo siento no tenemos esa operación")
+}
+
+repetir = prompt("¿Quieres repetir?");
+
+}while(repetir === "si")
+  </script>
+
+
+</body>
+</html>

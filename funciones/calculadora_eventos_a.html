@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible"
+        content="ie=edge">
+  <title>calculadora</title>
+</head>
+
+<body>
+
+  <style>
+    table {
+
+      margin: auto;
+      width: 15%;
+
+    }
+
+    .numero {
+      width: 60px;
+      height: 60px;
+    }
+
+    .numero-doble {
+      width: 60px;
+      height: 120px;
+
+    }
+
+    .color_display {
+      height: 30px;
+      background-color: #000;
+      border: medium #FFF;
+      font: "Space Age";
+      color: #0F0;
+      font-size: 18px;
+      text-align: right;
+      padding: 5px;
+      width: 97%;
+    }
+
+  </style>
+
+  <script>
+    var cifra = "";
+    var acumulado = 0;
+
+    function display_numero(numero) {
+
+
+      document.getElementById("display").value = cifra + numero;
+
+      cifra = document.getElementById("display").value;
+
+
+    }
+
+    function suma(){
+
+      acumulado = acumulado + parseInt(cifra);
+
+      document.getElementById("display").value = acumulado;
+
+      cifra = "";
+
+    }
+ 
+  </script>
+
+  <table style="border: 1px solid rgb(170, 170, 170); "
+         border="1">
+
+    <tr>
+      <td colspan="4">
+        <input type="text"
+               class="color_display"
+               id="display" >
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <input type="button"
+               name="7"
+               value="7"
+               id=""
+               class="numero" onclick="display_numero(7);">
+      </td>
+      <td>
+        <input type="button"
+               name="8"
+               value="8"
+               id=""
+               class="numero" onclick="display_numero(8);">
+      </td>
+      <td>
+        <input type="button"
+               name="9"
+               value="9"
+               id=""
+               class="numero" onclick="display_numero(9);"> 
+      </td>
+      <td rowspan="2">
+        <input type="button"
+               name=""
+               value="+"
+               id=""
+               class="numero-doble" onclick="suma();" >
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <input type="button"
+               name="4"
+               value="4"
+               id=""
+               class="numero" onclick="display_numero(4);">
+      </td>
+      <td>
+        <input type="button"
+               name="5"
+               value="5"
+               id=""
+               class="numero" onclick="display_numero(5);">
+      </td>
+      <td>
+        <input type="button"
+               name="6"
+               value="6"
+               id=""
+               class="numero" onclick="display_numero(6);">
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <input type="button"
+               name="1"
+               id=""
+               value="1"
+               class="numero" onclick="display_numero(1);">
+      </td>
+      <td>
+        <input type="button"
+               name="2"
+               id=""
+               value="2"
+               class="numero" onclick="display_numero(2);">
+      </td>
+      <td>
+        <input type="button"
+               name="3"
+               id=""
+               value="3"
+               class="numero" onclick="display_numero(3);">
+      </td>
+      <td rowspan="2">
+        <input type="button"
+               name=""
+               id=""
+               value="Int"
+               class="numero-doble" onclick="">
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <input type="button"
+               name=""
+               id=""
+               class="numero"
+               value="*">
+      </td>
+      <td>
+        <input type="button"
+               name=""
+               id=""
+               class="numero"
+               value="/"
+               </td>
+        <td>
+          <input type="button"
+                 name=""
+                 id=""
+                 class="numero"
+                 value="-"
+                 </td>
+    </tr>
+
+
+  </table>
+
+</body>
+
+</html>
