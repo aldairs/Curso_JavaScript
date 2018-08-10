@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible"
+        content="ie=edge">
+  <title>Eliminar y remplazar contenido</title>
+  <link rel="stylesheet"
+        href="css/estilos.css">
+  <script src="js/jQuery.js"></script>
+</head>
+
+<script>
+
+  $(document).ready(function () {
+
+
+    document.getElementById("cerrar").addEventListener("click", cerrar_banner, false);
+
+    //document.getElementById("imagen1").addEventListener("click",agregar_carrito, false);/*agregamos al carro de compras*/
+
+    var $arrayImagenes = document.querySelectorAll("#contenedor img");
+
+    for (let index = 0; index < $arrayImagenes.length; index++) {
+      $arrayImagenes[index].addEventListener("click", agregar_carrito, false);
+
+    }
+
+  })
+
+  function cerrar_banner() {
+
+    $("#banner").remove();
+  }
+
+  function agregar_carrito(num) {
+
+    if (num.target == imagen1) {
+      $("#imagen1").replaceWith("<div id ='imagen1'> se agrego al carrito de compra</div>");
+    }
+
+    if (num.target == imagen2) {
+      $("#imagen2").replaceWith("<div id ='imagen2'> se agrego al carrito de compra</div>");
+    }
+
+    if (num.target == imagen3) {
+      $("#imagen3").replaceWith("<div id ='imagen3'> se agrego al carrito de compra</div>");
+    }
+
+    if (num.target == imagen4) {
+      $("#imagen4").replaceWith("<div id ='imagen4'> se agrego al carrito de compra</div>");
+    }
+
+
+
+  }
+
+</script>
+
+<body>
+
+  <div id="contenedor">
+
+    <img src="Imagenes/labadora.png"
+         alt=""
+         class="imagenes"
+         id="imagen1">
+
+    <img src="Imagenes/microHonda.png"
+         alt=""
+         class="imagenes"
+         id="imagen2">
+
+    <img src="Imagenes/nevera.jpg"
+         alt=""
+         class="imagenes"
+         id="imagen3">
+
+    <img src="Imagenes/portatil.jpeg"
+         alt=""
+         class="imagenes"
+         id="imagen4">
+  </div>
+
+  <div id="banner">
+    <div id="cerrar">Cerrar</div>
+  </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+
+#contenedor{
+
+  padding: 0.5%;
+  height: 15%;
+  width: 60%;
+  border: 1px #3b78fc solid;
+  position: absolute;
+
+}
+
+.imagenes{
+
+  padding: 0.5%;
+  border: 1px #3b78fc solid;
+  width: 17%;
+  height: 60%;
+  margin: 2%;
+  float: left;
+}
+
+#banner{
+
+  height: 25%;
+  width: 25%;
+  background: #3b78fc;
+  position: absolute;
+  margin-left: 500px;
+  margin-top: 80px;
+  text-align: center;
+}
+
+#imagen1, #imagen2, #imagen3, #imagen4{
+
+  font-size: 12px;
+
+}
+
+
